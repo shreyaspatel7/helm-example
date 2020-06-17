@@ -80,7 +80,7 @@ You can disable the monitoring simply by simply setting `enabled: false`
 Simply run the following helm command after cloning this repo :)
 
 ```
-helm test app-release -n app
+helm install app-release . -n app --create-namespace
 
 ```
 
