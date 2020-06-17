@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "app-release.fullname" . }}
+  labels:
+    {{- include "app-release.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.netowrking.container.port }}
+      protocol: TCP
+      {{- if .Values.netowrking.container }}
+      name: {{ .Values.netowrking.container.name }}
+      {{- else }}
+      name: http
+      {{- end }}
+  selector:
+    {{- include "app-release.selectorLabels" . | nindent 4 }}
