@@ -3,7 +3,7 @@
 This is an example of helm deployment of the simple flask api [app](https://github.com/shreyaspatel7/app-test) we created previously. As a part of CICD we will build and push the image from the previous repo. Then either via downstream job or thorough spinnaker we can perform the helm release thought out this helm chart. The helm chart includes manifests for deployment, and clusterIP service. We have also included livenesprob on the TCP port that is running the flask api as well as readinessprob for /ready endpoint of the application.
 
 
-We have also added a tests pod manifests to test the release via service DNS to make wget call to check if the /will api end point is responding or not.
+We have also added a test pod manifests to test the release via service DNS to make wget call to check if the /will api end point is responding or not.
 
 ## Implementation detail
 
