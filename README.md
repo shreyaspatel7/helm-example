@@ -40,7 +40,7 @@ netowrking:
    name: app
    protocol: TCP
 ```
-*If you don't define these configuration the default is set to*:
+*If you don't define these configurations the default is set to the following*:
 ```
 ports:
 - name: http
