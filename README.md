@@ -11,7 +11,8 @@ This helm chart will deploy the flask api [app](https://github.com/shreyaspatel7
 
 
 ### Configurations
-As a part of nonroot user policy, we have configured the docker image to run as a specific user. The pod and deployment security context will be configured to throw the following yaml values. `We can further improve this chart by adding pod security policies and network security policies`.
+As a part of nonroot user policy, we have configured the docker image to run as a specific user. The pod and deployment security context will be configured to throw the following yaml values. 
+`We can further improve this chart by adding pod security policies and network security policies`.
 
 ```
 podSecurityContext:
@@ -40,7 +41,7 @@ netowrking:
    name: app
    protocol: TCP
 ```
-*If you don't define these configurations the default is set to the following*:
+*If you don't define these configurations then the default is set to the following*:
 ```
 ports:
 - name: http
@@ -49,7 +50,7 @@ ports:
 ```
 
 ###
-The monitoring configuration such as liveness and readiness probs are being done using the following:
+The monitoring configurations such as liveness and readiness probs are being done using the following:
 
 ```
 monitorConfig:
