@@ -7,11 +7,11 @@ We have also added a test pod manifests to test the release via service DNS to m
 
 ## Implementation detail
 
-This helm chart will deploy the flask api [app](https://github.com/shreyaspatel7/app-test) with any given configuration mentioned in the following section. It will as alo create clusterIP k8s service mapping to appropriate pod.
+This helm chart will deploy the flask api [app](https://github.com/shreyaspatel7/app-test) with any given configuration mentioned in the following section. It will as also create clusterIP k8s service mapping to appropriate pod.
 
 
 ### Configurations
-As a part of nonroot user policy, we have configured the docker image to run as a specific user. The pod and deployment  security context will be configured to throw the following yaml values. `We can further improve this chart by adding pod security policies and network security policies`.
+As a part of nonroot user policy, we have configured the docker image to run as a specific user. The pod and deployment security context will be configured to throw the following yaml values. `We can further improve this chart by adding pod security policies and network security policies`.
 
 ```
 podSecurityContext:
