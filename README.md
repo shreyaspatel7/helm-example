@@ -87,7 +87,7 @@ helm install app-release . -n app --create-namespace
 
 ```
 
-You can debug the templates view following command
+You can debug the templates via following command
 
 ```
 helm install app-release . --dry-run --debug
