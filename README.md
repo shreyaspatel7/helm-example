@@ -75,7 +75,7 @@ monitorConfig:
    successThreshold: 1
  ```
 
-You can disable the monitoring simply by simply setting `enabled: false`
+You can disable the monitoring by simply setting `enabled: false`
 
 
 ## How do I perform releases ?
